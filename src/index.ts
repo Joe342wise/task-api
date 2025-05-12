@@ -1,16 +1,10 @@
 /* eslint-disable no-console */
 import { serve } from '@hono/node-server'
-import { OpenAPIHono } from '@hono/zod-openapi'
-
-const app = new OpenAPIHono()
-
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+import app from './app.js'
 
 serve({
   fetch: app.fetch,
-  port: 3000,
+  port: 2808,
 }, (info) => {
   console.log(`Server is running on http://localhost:${info.port}`)
 })

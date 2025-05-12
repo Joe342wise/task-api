@@ -5,11 +5,14 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "npm run lint --fix"
   },
   "dependencies": {
     "@hono/node-server": "^1.14.1",
-    "hono": "^4.7.9"
+    "@hono/zod-openapi": "^0.19.6",
+    "hono": "^4.7.9",
+    "zod": "^3.24.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.13.0",
